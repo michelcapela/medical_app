@@ -25,18 +25,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
    
     if (empty($nome) || empty($celular) || empty($email) || empty($senha) || empty($confirmar_senha)) {
-        echo "Todos os campos são obrigatórios!";
+        echo "<h2>Todos os campos são obrigatórios!</h2>";
+        echo '<a href="../user_cadastro/index.html" style="display: inline-block; padding: 10px 20px; 
+        background-color: #008000; color: white; text-decoration: none; border-radius: 5px;">Voltar</a>';
         exit(); 
     }
 
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo "Email inválido!";
-        exit();
+        echo "<h2>E-mail inválido!</h2>";
+        echo '<a href="../user_cadastro/index.html" style="display: inline-block; padding: 10px 20px; 
+        background-color: #008000; color: white; text-decoration: none; border-radius: 5px;">Voltar</a>';
+        exit(); 
     }
 
     if (!validate_password($senha, $confirmar_senha)) {
-        echo "As senhas não coincidem!";
-        exit();
+        echo "<h2>As senhas não coincidem!</h2>";
+        echo '<a href="../user_cadastro/index.html" style="display: inline-block; padding: 10px 20px; 
+        background-color: #008000; color: white; text-decoration: none; border-radius: 5px;">Voltar</a>';
+        exit(); 
     }
 
     try {

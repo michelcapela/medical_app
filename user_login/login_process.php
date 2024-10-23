@@ -39,6 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "<h2>Email ou senha incorretos.</h2>";
         echo '<a href="../user_login/index.html" style="display: inline-block; padding: 10px 20px; 
         background-color: #008000; color: white; text-decoration: none; border-radius: 5px;">Voltar</a>';
+        exit();
     }
 }
 ?>

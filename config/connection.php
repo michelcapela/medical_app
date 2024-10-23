@@ -1,9 +1,9 @@
 <?php
 
-$host = 'seu_host';
-$dbname = 'seu_db';
-$user = 'seu_user';
-$pass = 'sua_senha';
+$host = 'localhost';
+$dbname = 'teste_xapp';
+$user = 'michel';
+$pass = '1234';
 
 try {
     
