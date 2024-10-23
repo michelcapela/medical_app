@@ -1,0 +1,33 @@
+CREATE DATABASE TESTE_XAPP;
+
+USE TESTE_XAPP;
+
+CREATE TABLE Cliente (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    senha VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE Contatos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    cliente_id INT NOT NULL,
+    telefone VARCHAR(20) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    FOREIGN KEY (cliente_id) REFERENCES Cliente(id) ON DELETE CASCADE
+);
+
+CREATE TABLE Medico (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    especialidade VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE Consultas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    cliente_id INT NOT NULL,
+    medico_id INT, 
+    data_consulta DATE NOT NULL,
+    descricao TEXT NOT NULL,
+    FOREIGN KEY (cliente_id) REFERENCES Cliente(id) ON DELETE CASCADE,
+    FOREIGN KEY (medico_id) REFERENCES Medico(id) ON DELETE SET NULL
+);

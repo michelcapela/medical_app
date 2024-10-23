@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Consultas</title>
+    <link rel="stylesheet" href="../assets/css/user_consulta_style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Minhas Consultas</h2>
+        <form action="process_consulta.php" method="POST">
+            <div class="input-group">
+                <label for="data_consulta">Data da Consulta *</label>
+                <input type="date" id="data_consulta" name="data_consulta" required>
+            </div>
+            <div class="input-group">
+                <label for="descricao">Descrição *</label>
+                <textarea id="descricao" name="descricao" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn" name="add_consulta">Adicionar Consulta</button>
+        </form>
+        <ul>
+            <li>
+                <strong>Data:</strong><br>
+                <strong>Descrição:</strong><br>
+                <strong>Médico:</strong><br>
+                <strong>Especialidade:</strong>
+                <a href="#" class="submit-btn" style="background-color: red;">Excluir</a>
+            </li>
+            <li>
+                <strong>Data:</strong><br>
+                <strong>Descrição:</strong><br>
+                <strong>Médico:</strong><br>
+                <strong>Especialidade:</strong>
+                <a href="#" class="submit-btn" style="background-color: red;">Excluir</a>
+            </li>
+        </ul>
+        
+    </div>
+</body>
+</html>
